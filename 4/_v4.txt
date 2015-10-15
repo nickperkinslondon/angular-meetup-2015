@@ -1,0 +1,9 @@
+_v4.txt
+
+Make the Grocery List work,
+Make it an Angular App
+( by writing Coffeescript )
+
+This will be basic Angular stuff
+All the code will be in the controller ( for now )
+

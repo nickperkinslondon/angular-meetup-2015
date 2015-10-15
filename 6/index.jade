@@ -1,0 +1,69 @@
+html(ng-app="meetupApp")
+	head
+
+		link(rel="stylesheet",href="../bootstrap.css")
+		link(rel="stylesheet",href="../font-awesome-4.4.0/css/font-awesome.css")
+		link(rel="stylesheet",href="../style.css")
+		script(src="../angular.js")
+		script(src="../angular-animate.js")
+		link(rel="stylesheet",href="animation.css")
+		script(src="../lodash.min.js")
+
+
+		script(src="app.js")
+		script(src="grocery_list_module.js")
+
+
+	body(ng-controller="meetupController", ng-cloak)
+
+		.container-fluid
+			.row
+				.col-sm-12
+
+					h1 {{ title }}
+					h5 v6 ( with Animations )
+
+					br
+
+					button.btn.btn-primary(
+						ng-click="new()"
+						ng-if="!input.visible"
+						) New
+
+					br
+					br
+					button.btn.btn-sm(
+						ng-click="add_random()"
+						ng-if="!input.visible"
+						) Add Random
+
+					span(ng-if="input.visible")
+
+						input.input(ng-model="input.text")
+
+						button.btn.btn-success(
+							ng-click="add()"
+							) Add
+
+					br
+					br
+					br
+
+					.grocery-items
+						.grocery-item(
+							ng-repeat="item in gl.items track by item.id"
+							ng-class="{'crossed-off':item.crossed_off}"
+							ng-if="!item.hidden"
+							)
+
+							.text(
+								ng-click="click(item)"
+								ng-class="{'crossed-off':item.crossed_off}"
+								)
+								span &nbsp; {{ item.text }}
+
+							.remover(ng-click='gl.remove(item)')
+								i.fa.fa-trash-o
+
+			br
+			a(href="../5/index.html") v5

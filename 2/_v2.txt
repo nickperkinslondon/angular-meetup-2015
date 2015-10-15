@@ -1,0 +1,31 @@
+_v2.txt
+
+Jade, Gulp
+
+Introducing Jade, Gulp, Node.js,
+How Gulp is different from Grunt:
+
+
+Both work by using "plug-ins", but they are configured differently:
+
+Grunt works by feeding it a huge set of configuration options, including options for plug-ins, then simply starting it up and letting it do it's thing.
+( configuration over code )
+
+Gulp works by requiring you to build your own "pipeline" by wiring together the various plug-ins that you will use.  Every plug-in uses the Node.js "stream" system to efficently process files in-memory before writing the results to disk.
+( code over configuration )
+
+Think of a very old IBM computer,
+just a huge gray box
+you push in a punch-card
+and it starts to do it's thing.
+That's Grunt.
+
+Now, think of an old telephone switchboard,
+where ladies with headphones manipulate cables and plugs.
+Any cable can be connected by simply plugging it in.
+That is Gulp.
+
+
+//- http://jade-lang.com/
+//- https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md
+//- https://github.com/phated/gulp-jade

@@ -1,0 +1,27 @@
+
+<html ng-app="meetupApp">
+  <head>
+    <link rel="stylesheet" href="../bootstrap.css"/>
+    <link rel="stylesheet" href="../style.css"/>
+    <script src="../angular.js"></script>
+    <script src="app.js"></script>
+    <script src="grocery_list_module.js"></script>
+  </head>
+  <body ng-controller="meetupController">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <h5>v5 ( with cross-off, and Modules )</h5>
+          <h1>{{ title }}</h1>
+          <h5>{{ subtitle }}</h5><br/><br/>
+          <button ng-click="new()" ng-if="!input.visible" class="btn btn-primary">New</button><span ng-if="input.visible">
+            <input ng-model="input.text" class="input"/>
+            <button ng-click="add()" class="btn btn-success">Add</button></span><br/><br/><br/>
+          <ul class="list-group">
+            <li ng-repeat="item in gl.items" ng-click="click(item)" ng-class="{'crossed-off':item.crossed_off}" class="list-group-item">{{ item.text }}</li>
+          </ul>
+        </div>
+      </div><br/><a href="../4/index.html">v4</a><br/><a href="../6/index.html">v6</a>
+    </div>
+  </body>
+</html>

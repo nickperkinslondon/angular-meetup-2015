@@ -1,0 +1,6 @@
+_v3.txt
+
+More Gulp!
+ - Coffeescript instead of JS ( minimal angular app for now )
+ - Live Reload!
+

@@ -1,0 +1,56 @@
+html(ng-app="meetupApp")
+	head
+		link(
+			rel="stylesheet"
+			href="../bootstrap.css"
+			)
+		link(rel="stylesheet",href="../style.css")
+		script(src="../angular.js")
+		script(src="app.js")
+		script(src="grocery_list_module.js")
+
+
+	body(ng-controller="meetupController")
+
+		.container-fluid
+			.row
+				.col-sm-12
+
+					h5 v5 ( with cross-off, and Modules )
+
+					h1 {{ title }}
+					h5 {{ subtitle }}
+
+					br
+					br
+
+					button.btn.btn-primary(
+						ng-click="new()"
+						ng-if="!input.visible"
+						) New
+
+					span(ng-if="input.visible")
+
+						input.input(ng-model="input.text")
+
+						button.btn.btn-success(
+							ng-click="add()"
+							) Add
+
+					br
+					br
+					br
+
+					ul.list-group
+						li.list-group-item(
+							ng-repeat="item in gl.items"
+							ng-click="click(item)"
+							ng-class="{'crossed-off':item.crossed_off}"
+							) {{ item.text }}
+
+
+
+			br
+			a(href="../4/index.html") v4
+			br
+			a(href="../6/index.html") v6

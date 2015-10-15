@@ -1,0 +1,64 @@
+body {
+  background: #d6ebf3;
+}
+.grocery-items .grocery-item {
+  cursor: pointer;
+  padding: 0px;
+  margin: 0px;
+  border: 1px solid #d3d3d3;
+  user-select: none;
+  width: 100%;
+  background: #fff;
+  box-shadow: 5px 5px 10px #808080;
+  font-weight: bold;
+  overflow: hidden;
+  border-radius: 0px;
+}
+.grocery-items .grocery-item.ng-enter {
+  transition: 400ms ease all;
+  height: 0px;
+}
+.grocery-items .grocery-item.ng-enter.ng-enter-active {
+  height: 40px;
+}
+.grocery-items .grocery-item.ng-leave {
+  transition: 400ms;
+  height: 40px;
+}
+.grocery-items .grocery-item.ng-leave.ng-leave-active {
+  height: 0px;
+}
+.grocery-items .grocery-item.ng-leave {
+  transition: 400ms ease all;
+  position: relative;
+  left: 0px;
+  opacity: 0.5;
+}
+.grocery-items .grocery-item.ng-leave.ng-leave-active {
+  left: 30px;
+  opacity: 0;
+}
+.grocery-items .grocery-item .text {
+  user-select: none;
+  width: 85%;
+  padding: 9px;
+  float: left;
+}
+.grocery-items .grocery-item .remover {
+  user-select: none;
+  height: 40px;
+  width: 35px;
+  float: right;
+  color: #f00;
+  padding: 10px;
+  margin: 0px;
+}
+.grocery-items .grocery-item .remover:hover {
+  color: #ffa500;
+  background: #e9e9e9;
+}
+.grocery-items .grocery-item.crossed-off {
+  background: #e0e0e0;
+  text-decoration: line-through;
+  font-weight: normal;
+}

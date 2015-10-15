@@ -1,0 +1,26 @@
+
+<html ng-app="GroceryListApp">
+  <head>
+    <link rel="stylesheet" href="../bootstrap.css"/>
+    <link rel="stylesheet" href="../style.css"/>
+    <script src="../angular.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="GroceryListController">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-12">
+          <h5>v4 ( with full Angular item list )</h5>
+          <h1>{{ title }}</h1>
+          <h5>{{ subtitle }}</h5><br/><br/>
+          <button ng-click="new()" ng-if="!input.visible" class="btn btn-primary">New</button><span ng-if="input.visible">
+            <input ng-model="input.text" class="input"/>
+            <button ng-click="add()" class="btn btn-success">Add</button></span><br/><br/><br/>
+          <ul class="list-group">
+            <li ng-repeat="item in items track by $index" class="list-group-item">{{ item }}</li>
+          </ul>
+        </div>
+      </div><br/><a href="../3/index.html">v3</a><br/><a href="../5/index.html">v5</a>
+    </div>
+  </body>
+</html>

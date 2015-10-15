@@ -1,0 +1,49 @@
+html(ng-app="GroceryListApp")
+	head
+		link(rel="stylesheet",href="../bootstrap.css")
+		link(rel="stylesheet",href="../style.css")
+		script(src="../angular.js")
+		script(src="app.js")
+
+
+	body(ng-controller="GroceryListController")
+
+		.container-fluid
+			.row
+				.col-sm-12
+
+					h5 v4 ( with full Angular item list )
+					h1 {{ title }}
+					h5 {{ subtitle }}
+
+					br
+					br
+
+					button.btn.btn-primary(
+						ng-click="new()"
+						ng-if="!input.visible"
+						) New
+
+					span(ng-if="input.visible")
+
+						input.input(ng-model="input.text")
+
+						button.btn.btn-success(
+							ng-click="add()"
+							) Add
+
+
+					br
+					br
+					br
+
+					ul.list-group
+						li.list-group-item(
+							ng-repeat="item in items track by $index"
+							) {{ item }}
+
+
+			br
+			a(href="../3/index.html") v3
+			br
+			a(href="../5/index.html") v5

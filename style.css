@@ -1,0 +1,18 @@
+
+body{
+	background:lightblue;
+}
+
+
+.list-group-item{
+	cursor:pointer;
+	font-weight:bold;
+}
+
+
+.crossed-off{
+	text-decoration:line-through;
+	color:gray;
+	background: lightgray;
+	font-weight: normal;
+}

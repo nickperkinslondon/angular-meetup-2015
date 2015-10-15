@@ -1,0 +1,69 @@
+
+// Stylus
+//  is a CSS Language, like Less or Sass
+//  it uses indentation for structure ( like Jade and Coffeescript )
+
+animation_delay = 400ms
+
+body
+	background lighten(lightblue,50%)
+
+.grocery-items
+	.grocery-item
+
+		cursor pointer
+		padding 0px
+		margin 0px
+		border 1px solid lightgray
+		user-select none
+		width 100%
+		background white
+		box-shadow 5px 5px 10px gray
+		font-weight bold
+		overflow hidden
+		border-radius 0px
+
+		&.ng-enter
+			transition animation_delay ease all
+			height 0px
+			&.ng-enter-active
+				height 40px
+
+		&.ng-leave
+			transition animation_delay
+			height 40px
+			&.ng-leave-active
+				height 0px
+
+		&.ng-leave
+			transition animation_delay ease all
+			position relative
+			left 0px
+			opacity 0.5
+			&.ng-leave-active
+				left 30px
+				opacity 0
+
+		.text
+			user-select none
+			width 85%
+			padding 9px
+			float left
+
+		.remover
+			user-select none
+			height 40px
+			width 35px
+			float right
+			color red
+			padding 10px
+			margin 0px
+
+			&:hover
+				color orange
+				background lighten(lightgray,50%)
+
+		&.crossed-off
+			background lighten(lightgray,30%)
+			text-decoration line-through
+			font-weight normal

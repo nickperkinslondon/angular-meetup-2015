@@ -1,0 +1,35 @@
+doctype html
+html(ng-app="GroceryListApp")
+	head
+		link(rel="stylesheet",href="../bootstrap.css")
+		link(rel="stylesheet",href="../style.css")
+
+		script(src="../angular.js")
+		script(src="app.js")
+
+
+	body(ng-controller="GroceryListController")
+		.container-fluid
+			.row
+				.col-md-6
+
+					h5 v3 ( with Coffeescript and Live-Reload )
+					h1 {{ title }}
+					h5 {{ subtitle }}
+
+					br
+					br
+
+					ul.list-group
+						li.list-group-item Milk
+						li.list-group-item Bread
+						li.list-group-item Eggs
+						li.list-group-item Juice
+						li.list-group-item Pancakes
+
+					//- ( next time, we will make the list dynamic )
+
+			br
+			a(href="../2/index.html") v2
+			br
+			a(href="../4/index.html") v4

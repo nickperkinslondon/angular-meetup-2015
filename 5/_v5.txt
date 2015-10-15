@@ -1,0 +1,6 @@
+_v5.txt
+
+Modularize the code : create a "Grocery List" module.
+
+We need to "cross-off" items, ( so we need a list of objects, not strings )
+
